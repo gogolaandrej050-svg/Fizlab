@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab1Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        app:layout_constraintDimensionRatio="H, 1:1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinecircuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09975669" />
+
+        <ImageView
+            android:id="@+id/circuit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1.25"
+            android:scaleY="1.25"
+            android:src="@drawable/circuit"
+            android:translationX="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/guidelinecircuit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.284" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV2_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7128954" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV2_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <ImageView
+            android:id="@+id/arrow_voltage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintDimensionRatio="98:105"
+            app:layout_constraintHeight_percent="0.15"
+
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineV_Y"
+            app:layout_constraintTop_toTopOf="@+id/guidelineV_Y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineV_X"
+            app:layout_constraintStart_toStartOf="@+id/guidelineV_X"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <ImageView
+            android:id="@+id/arrow_amperage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintDimensionRatio="98:105"
+            app:layout_constraintHeight_percent="0.15"
+
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineV2_Y"
+            app:layout_constraintTop_toTopOf="@+id/guidelineV2_Y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineV2_X"
+            app:layout_constraintStart_toStartOf="@+id/guidelineV2_X"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/control_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:hint="L, м"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/editR2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:hint="S, мм2"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/editI"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="I, А"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:checkedButton="@id/radioNicel"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioNicel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Никелин" />
+
+                <RadioButton
+                    android:id="@+id/radioNichrome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Нихром" />
+
+                <RadioButton
+                    android:id="@+id/radioFehral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Фехраль" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textVolt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Точные показания вольтметра: 0.00 В"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textAmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Точные показания амперметра: 0.00 А"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9109375" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6703125" />
+</androidx.constraintlayout.widget.ConstraintLayout>

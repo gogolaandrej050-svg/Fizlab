@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Optika3Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_labborder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/plane"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/converginglens" />
+
+        <ImageView
+            android:id="@+id/lens"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="167:295"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelinelens_y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelinelens_x"
+            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintStart_toStartOf="@+id/guidelinelens_x"
+            app:layout_constraintTop_toTopOf="@+id/guidelinelens_y"
+            app:srcCompat="@drawable/converginglensdraw" />
+
+        <ImageView
+            android:id="@+id/pen"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelinepen_y"
+            app:layout_constraintDimensionRatio="140:688"
+            app:layout_constraintEnd_toEndOf="@+id/guidelinepen_x"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="@+id/guidelinepen_x"
+            app:layout_constraintTop_toTopOf="@+id/guidelinepen_y"
+            app:srcCompat="@drawable/pen" /> <!-- Источник: https://www.flaticon.com/ru/free-icon/pen_2493530?term=%D1%80%D1%83%D1%87%D0%BA%D0%B0&page=1&position=16&origin=search&related_id=2493530 -->
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineimage_y"
+            app:layout_constraintDimensionRatio="140:688"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineimage_x"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="@+id/guidelineimage_x"
+            app:layout_constraintTop_toTopOf="@+id/guidelineimage_y"
+            app:srcCompat="@drawable/pen"/>  <!-- Источник: https://www.flaticon.com/ru/free-icon/pen_2493530?term=%D1%80%D1%83%D1%87%D0%BA%D0%B0&page=1&position=16&origin=search&related_id=2493530 -->
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinelens_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.486" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinelens_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.52" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinepen_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinepen_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineimage_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineimage_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+        <com.example.myproject.OpticsLensCanvasView
+            android:id="@+id/lensCanvasView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" /> <!-- Лучи -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_labborder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_scrollborder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="@id/guideline_scrollborder"
+        app:layout_constraintStart_toEndOf="@+id/lab_container"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/SelectTypeOfLens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тип линзы:"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupopt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:checkedButton="@id/radioNicel"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonopt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Рассеивающая  " />
+
+                <RadioButton
+                    android:id="@+id/radioButtonopt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Собирающая  " />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/distancetolenseText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="До фокуса"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <SeekBar
+                android:id="@+id/distancetolense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/BiggerOrSmallerText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тип изображения:\n• Увеличенное\n• Прямое\n• Мнимое"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_scrollborder"
+        app:layout_constraintStart_toEndOf="@+id/guideline_labborder"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

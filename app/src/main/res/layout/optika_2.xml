@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Optika2Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_labBottom"
+        app:layout_constraintDimensionRatio="H, 1:1.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/flashlight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineflashlight_Y"
+            app:layout_constraintDimensionRatio="218:1574"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineflashlight_X"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="@+id/guidelineflashlight_X"
+            app:layout_constraintTop_toTopOf="@+id/guidelineflashlight_Y"
+            app:layout_constraintVertical_bias="0.918"
+            app:srcCompat="@drawable/flashllight" />
+
+        <ImageView
+            android:id="@+id/protractor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineprotractor_Y"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineprotractor_X"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineprotractor_X"
+            app:layout_constraintTop_toTopOf="@+id/guidelineprotractor_Y"
+            app:srcCompat="@drawable/protractor" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineprotractor_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineprotractor_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineflashlight_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineflashlight_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <TextView
+            android:id="@+id/firstmedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Воздух (=ваакум*)\n n=1"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelinefirstmedium_Y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelinefirstmedium_X"
+            app:layout_constraintStart_toStartOf="@+id/guidelinefirstmedium_X"
+            app:layout_constraintTop_toTopOf="@+id/guidelinefirstmedium_Y" />
+
+        <TextView
+            android:id="@+id/secondmedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вода\n n=1.33"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelinesecondmedium_Y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelinesecondmedium_X"
+            app:layout_constraintStart_toStartOf="@+id/guidelinesecondmedium_X"
+            app:layout_constraintTop_toTopOf="@+id/guidelinesecondmedium_Y" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinefirstmedium_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinefirstmedium_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesecondmedium_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesecondmedium_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.88" />
+
+        <com.example.myproject.OpticsRefractionCanvasView
+            android:id="@+id/opticsCanvas"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_labBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="1.1" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/lab_container"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textAngleValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Угол падения: 0°"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textAngleValue2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Угол преломления: 0°"
+                android:textSize="18sp" />
+
+            <SeekBar
+                android:id="@+id/seekBarAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="90"
+                android:progress="0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Падает из:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Падает в:"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupfirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:checkedButton="@id/radioNicel"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Вода" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Воздух (=ваакум*)" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Алмаз" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/placeholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupsecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:checkedButton="@id/radioNicel"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Вода" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Воздух (=ваакум*)" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Алмаз" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

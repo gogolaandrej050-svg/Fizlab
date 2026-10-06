@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab3Activity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        app:layout_constraintDimensionRatio="H, 1:1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/circuit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:src="@drawable/circuit3"
+            android:translationX="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.538" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.398" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV2_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.869" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV2_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineAmpmain_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.738" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineAmpmain_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRheostat_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.89" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRheostat_Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRheostat_End"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <ImageView
+            android:id="@+id/arrow_voltage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintDimensionRatio="98:105"
+            app:layout_constraintHeight_percent="0.15" app:layout_constraintBottom_toBottomOf="@+id/guidelineV_Y"
+            app:layout_constraintTop_toTopOf="@+id/guidelineV_Y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineV_X"
+            app:layout_constraintStart_toStartOf="@+id/guidelineV_X"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/arrow_voltage2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintDimensionRatio="98:105"
+            app:layout_constraintHeight_percent="0.15"
+
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineV2_Y"
+            app:layout_constraintTop_toTopOf="@+id/guidelineV2_Y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineV2_X"
+            app:layout_constraintStart_toStartOf="@+id/guidelineV2_X"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/arrow_amp_main"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintDimensionRatio="98:105"
+            app:layout_constraintHeight_percent="0.15"
+
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineAmpmain_Y"
+            app:layout_constraintTop_toTopOf="@+id/guidelineAmpmain_Y"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineAmpmain_X"
+            app:layout_constraintStart_toStartOf="@+id/guidelineAmpmain_X"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/rheostat_slider"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/slider"
+            app:layout_constraintDimensionRatio="24:32" app:layout_constraintHeight_percent="0.05" app:layout_constraintBottom_toBottomOf="@+id/guidelineRheostat_Y"
+            app:layout_constraintTop_toTopOf="@+id/guidelineRheostat_Y"
+            app:layout_constraintStart_toStartOf="@+id/guidelineRheostat_Start"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineRheostat_Start"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab_container"> <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Cопротивление реостата: 0.00 В"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/seekBarRheostat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:max="100"
+            android:progress="0" />
+
+        <EditText
+            android:id="@+id/editR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="R, Ом"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textVolt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Точные показания центрального вольтметра: 0.00 В"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textVolt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Точные показания вольтметра реостата: 0.00 В"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textAmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Точные показания амперметра: 0.00 А"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

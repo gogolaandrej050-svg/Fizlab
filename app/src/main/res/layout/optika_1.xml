@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Optika1Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_labBottom"
+        app:layout_constraintDimensionRatio="H, 1:1.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/flashlight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineflashlight_Y"
+            app:layout_constraintDimensionRatio="218:1574"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineflashlight_X"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="@+id/guidelineflashlight_X"
+            app:layout_constraintTop_toTopOf="@+id/guidelineflashlight_Y"
+            app:layout_constraintVertical_bias="0.918"
+            app:srcCompat="@drawable/flashllight" />
+
+        <ImageView
+            android:id="@+id/protractor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineprotractor_Y"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineprotractor_X"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineprotractor_X"
+            app:layout_constraintTop_toTopOf="@+id/guidelineprotractor_Y"
+            app:srcCompat="@drawable/protractor" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineprotractor_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineprotractor_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineflashlight_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineflashlight_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <com.example.myproject.OpticsCanvasView
+            android:id="@+id/opticsCanvas"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_labBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="1.1" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="1dp"
+    app:layout_constraintTop_toBottomOf="@+id/lab_container"
+    app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textAngleValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Угол падения: 0°"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textAngleValue2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Угол отражения: 0°"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/seekBarAngle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="90"
+            android:progress="0" />
+
+    </LinearLayout>
+</ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
